@@ -2,7 +2,14 @@
 
 # Monitoring Automation - Filebeat, Elasticsearch, and Kibana
 
-Ce repository contient des fichiers de configuration et des playbooks pour automatiser l'installation et la configuration de **Filebeat**, **Elasticsearch**, et **Kibana**, ainsi que la création de dashboards et l'intégration des logs.
+Ce repository contient 2 parties:
+## Partie 1: 
+Je scripte tout le process d'installation de prérequis dans le fichier *install_monitoring_interactive.sh* 
+ce script est composé de fonctions. Pour l'exécuter: ./install_monitoring_interactive.sh , ensuite il vous propose des options.
+## Partie 2:
+Arborescence des fichiers de configuration et des playbooks pour automatiser l'installation et la configuration de **Filebeat**, **Elasticsearch**, et **Kibana**, ainsi que la création de dashboards et l'intégration des logs.
+Le but final est de pouvoir visualiser des logs, métriques via l'interface KIBANA.
+J'apporterai plus de détails concernant les fichiers à configurer (que rajouter? quid des GROK? etc...)
 
 ## Prérequis
 
@@ -13,7 +20,10 @@ Ce repository contient des fichiers de configuration et des playbooks pour autom
 - Accès aux serveurs où installer Filebeat, Elasticsearch, et Kibana
 
 ## Étapes
+#### PARTIE 1
 
+
+#### PARTIE 2
 ### 1. Installer Filebeat
 
 Le playbook `filebeat-playbook.yml` installe et configure **Filebeat** sur les serveurs cibles.
