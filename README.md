@@ -5,7 +5,8 @@
 Ce repository contient 2 parties:
 ## Partie 1: 
 Je scripte tout le process d'installation de prérequis dans le fichier *install_monitoring_interactive.sh* 
-ce script est composé de fonctions. Pour l'exécuter: ./install_monitoring_interactive.sh , ensuite il vous propose des options.
+ce script est composé de fonctions. Pour l'exécuter: 
+```./install_monitoring_interactive.sh ```-> Un menu d'option s vous est proposé.
 ## Partie 2:
 Arborescence des fichiers de configuration et des playbooks pour automatiser l'installation et la configuration de **Filebeat**, **Elasticsearch**, et **Kibana**, ainsi que la création de dashboards et l'intégration des logs.
 Le but final est de pouvoir visualiser des logs, métriques via l'interface KIBANA.
