@@ -20,6 +20,8 @@ Je travaille sur la structuration et l'automatisation du déploiement d'une stac
 ## Étapes
 #### PARTIE 1
 
+voir script bash
+
 
 #### PARTIE 2
 ### 1. Installer Filebeat
