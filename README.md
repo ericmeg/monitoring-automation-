@@ -62,7 +62,6 @@ Commandes :
 
 ```bash
 ansible-playbook -i hosts kibana-playbook.yml
-```bash
 ```
 
 
