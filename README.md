@@ -43,5 +43,85 @@ Ensuite, ajoute les fichiers au dépôt Git, puis commit et pousse les modificat
 ```bash
 git add .
 git commit -m "Ajout des fichiers de configuration et playbook pour l'automatisation du monitoring"
-git push origin main
+git push origin main```
+```
+
+### 2. Installer Elasticsearch
+
+Le playbook elasticsearch-playbook.yml permet d'installer et de configurer Elasticsearch.
+
+Commandes :
+
+ansible-playbook -i hosts elasticsearch-playbook.yml
+
+### 3. Installer Kibana
+
+Le playbook kibana-playbook.yml installe et configure Kibana.
+
+Commandes :
+---
+```ansible-playbook -i hosts kibana-playbook.yml```
+---
+
+### 4. Vérifier l'installation
+
+Une fois l'installation terminée, vous pouvez vérifier l'état des services avec :
+
+systemctl status filebeat
+systemctl status elasticsearch
+systemctl status kibana
+
+### 5. Configurer et activer Filebeat
+
+Filebeat doit être configuré pour envoyer les logs à Elasticsearch.
+
+Commandes :
+
+filebeat modules enable system
+filebeat setup
+systemctl restart filebeat
+
+### 6. Vérifier la connexion entre Filebeat et Elasticsearch
+
+Exécutez la commande suivante pour tester la connexion :
+
+filebeat test output
+
+### 7. Configuration des pipelines d'ingestion
+
+Elasticsearch peut utiliser des pipelines d'ingestion pour traiter les logs avant indexation.
+
+Exemple de configuration :
+
+{
+  "description": "Pipeline pour parser les logs Apache",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns": ["%{COMMONAPACHELOG}"]
+      }
+    }
+  ]
+}
+
+### 8. Création de dashboards Kibana
+
+Une fois Filebeat configuré, vous pouvez charger les dashboards par défaut :
+
+filebeat setup --dashboards
+
+### 9. Automatisation avec script interactif
+
+Un script Bash interactif install_monitoring_interactive.sh est disponible pour automatiser l'installation.
+
+Exécution :
+
+./install_monitoring_interactive.sh
+
+Le script propose un menu permettant de choisir les composants à installer et configure automatiquement les services.
+
+
+
+
 
