@@ -71,9 +71,11 @@ ansible-playbook -i hosts kibana-playbook.yml
 
 Une fois l'installation terminée, vous pouvez vérifier l'état des services avec :
 
+```bash
 systemctl status filebeat
 systemctl status elasticsearch
 systemctl status kibana
+```
 
 ### 5. Configurer et activer Filebeat
 
