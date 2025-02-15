@@ -52,7 +52,9 @@ Le playbook elasticsearch-playbook.yml permet d'installer et de configurer Elast
 
 Commandes :
 
+```bash
 ansible-playbook -i hosts elasticsearch-playbook.yml
+```
 
 ### 3. Installer Kibana
 
