@@ -58,7 +58,7 @@ ansible-playbook -i hosts elasticsearch-playbook.yml
 
 ### 3. Installer Kibana
 
-Le playbook kibana-playbook.yml installe et configure Kibana.
+Le playbook **kibana-playbook.yml** installe et configure Kibana.
 
 Commandes :
 
@@ -83,15 +83,19 @@ Filebeat doit être configuré pour envoyer les logs à Elasticsearch.
 
 Commandes :
 
+```bash
 filebeat modules enable system
 filebeat setup
 systemctl restart filebeat
+```
 
 ### 6. Vérifier la connexion entre Filebeat et Elasticsearch
 
 Exécutez la commande suivante pour tester la connexion :
 
+```bash
 filebeat test output
+```
 
 ### 7. Configuration des pipelines d'ingestion
 
@@ -115,15 +119,19 @@ Exemple de configuration :
 
 Une fois Filebeat configuré, vous pouvez charger les dashboards par défaut :
 
+```bash
 filebeat setup --dashboards
+```
+
 
 ### 9. Automatisation avec script interactif
 
 Un script Bash interactif install_monitoring_interactive.sh est disponible pour automatiser l'installation.
 
-Exécution :
-
+**Exécution** : Comme mentionner plus haut
+```bash
 ./install_monitoring_interactive.sh
+```
 
 Le script propose un menu permettant de choisir les composants à installer et configure automatiquement les services.
 
