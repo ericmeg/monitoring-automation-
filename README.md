@@ -8,9 +8,7 @@ Je scripte tout le process d'installation de prérequis dans le fichier *install
 ce script est composé de fonctions. Pour l'exécuter: 
 ```./install_monitoring_interactive.sh ```-> Un menu d'options vous est proposé.
 ## Partie 2:
-Arborescence des fichiers de configuration et des playbooks pour automatiser l'installation et la configuration de **Filebeat**, **Elasticsearch**, et **Kibana**, ainsi que la création de dashboards et l'intégration des logs.
-Le but final est de pouvoir visualiser des logs, métriques via l'interface KIBANA.
-J'apporterai plus de détails concernant les fichiers à configurer (que rajouter? quid des GROK? etc...)
+Je travaille sur la structuration et l'automatisation du déploiement d'une stack de monitoring avec **Filebeat, Elasticsearch et Kibana**. Cela inclut l'organisation des fichiers de configuration et des **playbooks Ansible** pour installer, configurer et intégrer ces outils, ainsi que la création de dashboards interactifs pour visualiser les logs et métriques. J'affinerai ensuite la configuration en approfondissant des aspects clés comme les **pipelines d'ingestion, les filtres GROK** pour le parsing des logs et l'optimisation des requêtes dans Kibana.
 
 ## Prérequis
 
