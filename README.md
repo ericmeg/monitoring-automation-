@@ -59,9 +59,12 @@ ansible-playbook -i hosts elasticsearch-playbook.yml
 Le playbook kibana-playbook.yml installe et configure Kibana.
 
 Commandes :
----
-```ansible-playbook -i hosts kibana-playbook.yml```
----
+
+```bash
+ansible-playbook -i hosts kibana-playbook.yml
+```bash
+```
+
 
 ### 4. Vérifier l'installation
 
